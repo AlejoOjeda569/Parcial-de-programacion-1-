@@ -23,18 +23,18 @@
                 }
                 else
                 {
-                    Console.WriteLine("los numeros de Radio o Altura no pueden ser 0");
+                    Console.WriteLine("los numeros de Radio o Altura no pueden ser menores que 1");
                 }
 
             } while (true);
         }
 
-        private static double CrearArea(double radio, double altura) => 2 * Math.PI * radio * (radio * altura);
+        private static double CrearArea(double radio, double altura) =>Math.Truncate( 2 * Math.PI * radio * (radio * altura));
         
 
         private static double CrearVolumen(double Base, double altura) =>Base * altura;
         
-        private static double CrearBase(double Radio) => Math.PI * Math.Pow(Radio, 2);
+        private static double CrearBase(double Radio) =>Math.Truncate(Math.PI * Math.Pow(Radio, 2));
         
 
         private static double crearmetodo(string Mensaje)
